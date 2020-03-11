@@ -1,0 +1,59 @@
+1.	
+Form validation is when a form is filled out and privided with feedback when the data is entered.
+Data entered can be various, but in some cases the required field has specfic chracters that would
+need to be entered before the form can be validated.  
+
+2.	
+    1.) HTML5 built in form validation, requires no JavaScript
+    2.) JavaScript
+
+3.
+HTML5 built in form validation is when data provided is correct, allowing for imputted data to be sumbitted 
+through a server, then saved to the database. However from the backend if the data does not fulfill the required
+paramaters, then a notifcation will appear to state what would need to be fixed. 
+ the required attribute is the minimum req. that needs to be added for built in form validation to work.
+
+4.	
+    <input type= "text" name ="username" placeholder="username"
+                            pattern="J-p-i_9-da-uy_gh"
+                                title="A vaild username must be entered. At least one number, one 
+                                special chracter with 8 chracters must be entered."
+                            required>
+
+     To implement html5 built in form Validation we would need one of the seven attributes for built in from validation;
+      in this case the 'required' is used. This works when the pattern element uses a regex that is an example for the required data
+      chracters to be entered in the from prior to submission.                          
+
+5.	
+With JavaScript Constraint Validation API one has all acess control over customizing all aspects of the form
+validation;back-end and front-end. With HTML5 form validation one only has control for the client-side server. 
+
+6.	
+ the title attribute because it will override messages made in the JavaScript through the .setCustomValidity() 
+ method.
+
+
+7.	
+While it may be good for a UX, client side is not secure and can be easily manipulated.
+When data has be inputted that is invalid, on the server side it is rejected. 
+
+8.
+To obtain all the corectly formatted data. 
+To protect user's data by requiring them to create secure passwords/usernamess, which in return will
+protect their information. 
+To protect from hackers.
+
+
+9.	
+being able to validate most data inputted by the use w/o JavaScript. This is 
+accomplished by the use of validation attributes on form attributes such as
+required, min length, max length, etc.
+
+10.
+ required- specifies if a certain form field needs to be filled before submssion. 
+ min length/max length- specifies the minimum/maximum length of vaule that one can input 
+ min and max- specifies a minimum/maximum  vaules of number input types
+ type - specifies if data needs to be a number, email or any other particular preset type
+ pattern- specifies a regular expression (regex) defined as a pattern that any entered data needs to follow 
+
+
