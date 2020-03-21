@@ -1,11 +1,9 @@
 1.	
 Form validation is when a form is filled out and provided with feedback when the data is entered.
-Data entered can be various, but in some cases the required field has specific characters that would
-need to be entered before the form can be validated.  
 
 2.	
     1.) HTML5 built in form validation, requires no JavaScript
-    2.) JavaScript
+    2.) JavaScript with Constraint validation API. 
 
 3.
 HTML5 built in form validation is when data provided is correct, allowing for imputed data to be submitted 
@@ -14,15 +12,28 @@ parameters, then a notification will appear to state what would need to be fixed
  the required attribute is the minimum req. that needs to be added for built in form validation to work.
 
 4.	
-    <input type= "text" name ="username" placeholder="username"
+    A. <input type= "text" name ="username" placeholder="username"
                             pattern="J-p-i_9-da-uy_gh"
                                 title="A valid username must be entered. At least one number, one 
                                 special character with 8 characters must be entered."
                             required>
 
+    B. <input type="email" name="mail" placeholder="email"
+                            pattern= "r_io_09-er{5}"
+                                    title="Emails must contain an @ to be acceptable with an existing extension, Some
+                                    examples are @gmail.com, @yahoo.com"   
+                         required>   
+                    
+     C. <input type="password" name="password" id= "Password" placeholder="password" 
+                            pattern="(lo-567_(hid)=r_io_09-et"
+                                title="Password must contain 8 characters, a special character with a lower and capital letter.  "    
+                         required>                        
+
      To implement html5 built in form Validation we would need one of the seven attributes for built in from validation;
       in this case the 'required' is used. This works when the pattern element uses a regex that is an example for the required data
-      characters to be entered in the from prior to submission.                          
+      characters to be entered in the from prior to submission.              
+
+
 
 5.	
 With JavaScript Constraint Validation API one has all access control over customizing all aspects of the form
@@ -35,7 +46,10 @@ validation;back-end and front-end. With HTML5 form validation one only has contr
 
 7.	
 While it may be good for a UX, client side is not secure and can be easily manipulated.
-When data has be inputted that is invalid, on the server side it is rejected. 
+When data has be inputted that is invalid, on the client side it is rejected; the input does not match the regex 
+so it never gets to server-side. 
+
+
 
 8.
 To obtain all the correctly formatted data. 

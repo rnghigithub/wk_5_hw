@@ -1,10 +1,11 @@
+
 const email = document.querySelector('[name="mail"]');
 const password = document.querySelector('[name="password"]');
 const username = document.querySelector('[name="username"]');
 const form = document.querySelector("form");
 const button = document.querySelector("#btn");
 
-const heading1 =document.getElementById("titlehw");
+const heading1 =document.getElementById("title_hw");
 
 form.addEventListener("input" , () => {
     username.validity.patternMismatch
@@ -18,7 +19,7 @@ form.addEventListener("input" , () => {
     :email.setCustomValidity(``);
 
     password.validity.patternMismatch
-    ? password.setCustomValidity (`Password must contain 8 characters, a special chracter with a lower and capital letter.`)
+    ? password.setCustomValidity (`Password must contain 8 characters, a special character with a lower and capital letter.`)
     :password.setCustomValidity(``);
 
     if (
@@ -37,5 +38,5 @@ form.addEventListener("input" , () => {
         window.location.reload();
     }
 
-    const btnReset = document.getElementById("btnreset");
+    const btnReset = document.getElementById("btnReset");
     btnReset.addEventListener("click", clearForm);
